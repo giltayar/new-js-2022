@@ -1,0 +1,21 @@
+{
+  "name": "new-js-2022",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "01-dynamic-import.js",
+  "private": true,
+  "scripts": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giltayar/new-js-2022.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giltayar/new-js-2022/issues"
+  },
+  "homepage": "https://github.com/giltayar/new-js-2022#readme"
+}
