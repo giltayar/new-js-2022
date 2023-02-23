@@ -1,35 +1,33 @@
 // I don't use class. I never found a use for it!
 // But some people do, so this is for them.
 
-
 class Circle {
   constructor(radius) {
-    this.r = radius;
+    this.r = radius
   }
 
   circumference() {
-    return 2 * Math.PI * this.r;
+    return 2 * Math.PI * this.r
   }
 
   area() {
-    return Math.PI * this.r ** 2;
+    return Math.PI * this.r ** 2
   }
 }
 
 // But let's say I want to hide `r`. I can do this, which is what lots of people do
 
-
 class Circle2 {
   constructor(radius) {
-    this._r = radius;
+    this._r = radius
   }
 
   circumference() {
-    return 2 * Math.PI * this._r;
+    return 2 * Math.PI * this._r
   }
 
   area() {
-    return Math.PI * this._r ** 2;
+    return Math.PI * this._r ** 2
   }
 }
 
@@ -39,12 +37,12 @@ class Circle2 {
 function makeCircle(radius) {
   return {
     circumference() {
-      return 2 * Math.PI * radius;
+      return 2 * Math.PI * radius
     },
 
     area() {
-      return Math.PI * radius ** 2;
-    }
+      return Math.PI * radius ** 2
+    },
   }
 }
 
@@ -53,15 +51,15 @@ const r = Symbol()
 
 export class Circle3 {
   constructor(radius) {
-    this[r] = radius;
+    this[r] = radius
   }
 
   circumference() {
-    return 2 * Math.PI * this[r];
+    return 2 * Math.PI * this[r]
   }
 
   area() {
-    return Math.PI * this[r] ** 2;
+    return Math.PI * this[r] ** 2
   }
 }
 
@@ -81,15 +79,15 @@ class Circle4 {
   #r
 
   constructor(radius) {
-    this.#r = radius;
+    this.#r = radius
   }
 
   circumference() {
-    return 2 * Math.PI * this.#r;
+    return 2 * Math.PI * this.#r
   }
 
   area() {
-    return Math.PI * this.#r ** 2;
+    return Math.PI * this.#r ** 2
   }
 }
 
