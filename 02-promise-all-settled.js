@@ -21,7 +21,7 @@ async function swapi(path) {
 // Something interesting here, which devs don't notice! Let's write two tasks:
 // 1 fails after 1 second, the other succeeds after 5 seconds.
 
-import { setTimeout } from "node:timers/promises"
+import { setTimeout } from 'node:timers/promises'
 
 // In Promise.all, the Promise.all ends when the first Promise is settled (the rejection)
 // BUT! The other promise continues "running". Never forget that! And it's weird and wrong.
