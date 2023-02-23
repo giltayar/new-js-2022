@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script type="importmap">
+    {
+      "imports": {
+        "node:timers/promises": "./awaitable-timers.js"
+      }
+
+    }
+  </script>
+  <script type="module">
+    import './01-numeric-separator.js'
+    import './02-promise-all-settled.js'
+    import './03-private-fields.js'
+    import './04-top-level-await-import.js'
+  </script>
+</body>
+</html>

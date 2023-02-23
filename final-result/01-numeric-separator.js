@@ -20,11 +20,11 @@ const badSeparators = 10_000_0000
 
 // But you can't put it in front...
 
-const prefix = _1000
+// const prefix = _1000
 
 // Or in the back
 
-const suffix = 1000_
+// const suffix = 1000_
 
 // And don't forget all nubers are floating point...
 
@@ -32,7 +32,7 @@ const float = 2_999.4_400
 
 // And no prefix, once again...
 
-const floatPrefix = 2_999._400
+// const floatPrefix = 2_999._400
 
 // It's one of those little things that make a language easier to use. Love those!
 

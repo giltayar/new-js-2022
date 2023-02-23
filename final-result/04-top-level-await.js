@@ -1,6 +1,6 @@
 // It used to be, that to write async code, we needed to wrap it:
 
-import { setTimeout } from 'timers/promises'
+import { setTimeout } from 'node:timers/promises'
 
 async function main() {
   await setTimeout(500)

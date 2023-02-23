@@ -19,6 +19,7 @@
   "homepage": "https://github.com/giltayar/new-js-2022#readme",
   "devDependencies": {
     "@types/node": "^18.14.1",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "serve": "^14.2.0"
   }
 }

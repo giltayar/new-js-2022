@@ -1,6 +1,6 @@
 // Does top-level await work in CJS?
 
-const { setTimeout } = require('timers/promises')
+const { setTimeout } = require('node:timers/promises')
 
 await setTimeout(500)
 console.log('done')
