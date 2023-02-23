@@ -1,5 +1,3 @@
-//@ts-check
-
 // This is a small number
 
 const smallNumber = 100
