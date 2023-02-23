@@ -10,7 +10,7 @@
   <script type="importmap">
     {
       "imports": {
-        "node:timers/promises": "./awaitable-timers.js"
+        "node:timers/promises": "./node-timers-polyfill.js"
       }
 
     }
@@ -20,6 +20,9 @@
     import './02-promise-all-settled.js'
     import './03-private-fields.js'
     import './04-top-level-await-import.js'
+    import './05-dynamic-import.js'
+
+    console.log('***************************************')
   </script>
 </body>
 </html>
