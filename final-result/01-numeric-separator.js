@@ -41,4 +41,3 @@ const float = 2_999.4_400
 // Stage 4: July 2020
 //
 // 3 years!
-

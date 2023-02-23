@@ -6,7 +6,8 @@
   "main": "01-dynamic-import.js",
   "private": true,
   "scripts": {
-    "start": "serve final-result"
+    "start": "serve final-result",
+    "build": "prettier -w **/*.cjs **/*.js"
   },
   "repository": {
     "type": "git",
