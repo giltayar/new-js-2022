@@ -1,4 +1,5 @@
 // I don't use class. I never found a use for it!
+//
 // But some people do, so this is for them.
 
 class Circle {
@@ -32,6 +33,7 @@ class Circle2 {
 }
 
 // This is nice, and for me, sufficient enough!
+//
 // (well, I would do wihout, but that's me:)
 
 function makeCircle(radius) {
@@ -47,6 +49,7 @@ function makeCircle(radius) {
 }
 
 // But for some use cases, the need to hide is real (e.g. API-s). We can do this:
+
 const r = Symbol()
 
 export class Circle3 {
@@ -63,7 +66,8 @@ export class Circle3 {
   }
 }
 
-// But we can still enumerate the properties and get at the private field
+// But we can still enumerate the properties and get at the private field:
+
 const c = new Circle3(42)
 
 console.log(Object.getOwnPropertySymbols(c))
@@ -72,7 +76,8 @@ console.log(Object.getOwnPropertySymbols(c))
 
 console.log(c[Object.getOwnPropertySymbols(c)[0]])
 
-// ouch.
+// Ouch.
+//
 // So whadda we do? We use private fields!
 
 class Circle4 {
@@ -92,18 +97,25 @@ class Circle4 {
 }
 
 // Now nobody can access the field outside the class!
+
 console.log(Object.getOwnPropertyDescriptors(new Circle4()))
 
 // Let's try and circumvent by injecting a function into the object!
 
 const c4 = new Circle4()
 
-// c4.hackIt = function() {return this.#r}
-
-// console.log(c4.hackIt())
+//* c4.hackIt = function() {return this.#r}
+//* console.log(c4.hackIt())
 
 // What about injecting it into the proototype?
 
-// Object.getPrototypeOf(c4).hackIt = function() {return this.#r}
+//* Object.getPrototypeOf(c4).hackIt = function() {return this.#r}
 
-// No way to circumvent it!
+// No way to circumvent it! 🎉
+
+// First commit: Jan 2015
+// Stage 1: April 2016
+// Merged into class fields: Dec 2017
+// Stage 4: Jun 2021
+//
+// 6.5 years!

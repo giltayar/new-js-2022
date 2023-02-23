@@ -13,7 +13,7 @@ async function swapi(path) {
 // But what if one of them errors?
 
 // But what if I want the result of everything? Let's define `always`
-
+//
 // Yeah, but this doesn't distinguish between regular result and error result. Let's try again
 
 // There we go! Now we have this in JS
@@ -24,8 +24,15 @@ async function swapi(path) {
 import { setTimeout } from 'node:timers/promises'
 
 // In Promise.all, the Promise.all ends when the first Promise is settled (the rejection)
+//
 // BUT! The other promise continues "running". Never forget that! And it's weird and wrong.
 
 // Promise.allSettled ends when _all_ of the promises settle, so makes more sense
 
 // How do we make the other task end when the other's end? We use AbortController
+
+// First commit: May 2018
+// Stage 1: September 2018
+// Stage 4: July 2019
+//
+// 1 year!

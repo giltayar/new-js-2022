@@ -16,3 +16,8 @@
 //
 // Back!
 //
+// Initial commit: September 2016
+// Stage 2: October 2016 (there never was a stage 1)
+// Stage 4: June 2019
+//
+// 3 years!

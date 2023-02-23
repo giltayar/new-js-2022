@@ -14,10 +14,10 @@ console.log((await Promise.all([swapi('people/1'), swapi('people/1')])).map(p =>
 
 // But what if one of them errors?
 
-// await Promise.all([swapi('people/1'), swapi('people/2'), swapi('peop')])
+//* await Promise.all([swapi('people/1'), swapi('people/2'), swapi('peop')])
 
 // But what if I want the result of everything?
-
+//
 // I can do this:
 
 function always(p) {
@@ -43,20 +43,24 @@ console.log(await Promise.allSettled([swapi('people/1'), swapi('peop')]))
 
 import { setTimeout } from 'node:timers/promises'
 
-// In Promise.all, the Promise.all ends when the first Promise is settled (the rejection)
+// In Promise.all, the Promise.all ends when the first Promise is settled (the rejection).
+//
 // BUT! The other promise continues "running". Never forget that! And it's weird and wrong.
+
 await Promise.all([
   setTimeout(1000).then(_ => Promise.reject(1)),
   setTimeout(4000).then(_ => console.log('done')),
 ]).catch(_ => console.log('promise.all done'))
 
-// Promise.allSettled ends when _all_ of the promises settle, so makes more sense
+// Promise.allSettled ends when _all_ of the promises settle, so makes more sense:
+
 await Promise.allSettled([
   setTimeout(1000).then(_ => Promise.reject(1)),
   setTimeout(4000).then(_ => console.log('done')),
 ]).then(_ => console.log('promise.allSettled done'))
 
-// How do we make the other task end when the other's end? We use AbortController
+// How do we make the other task end when the other's end? We use AbortController:
+
 const ac = new AbortController()
 await Promise.allSettled([
   setTimeout(1000)
@@ -64,3 +68,9 @@ await Promise.allSettled([
     .finally(_ => ac.abort()),
   setTimeout(4000, null, { signal: ac.signal }).finally(_ => console.log('done')),
 ]).then(_ => console.log('promise.allSettled done'))
+
+// First commit: May 2018
+// Stage 1: September 2018
+// Stage 4: July 2019
+//
+// 1 year!

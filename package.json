@@ -5,7 +5,9 @@
   "type": "module",
   "main": "01-dynamic-import.js",
   "private": true,
-  "scripts": {},
+  "scripts": {
+    "start": "serve final-result"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/giltayar/new-js-2022.git"
